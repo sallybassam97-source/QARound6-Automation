@@ -15,7 +15,8 @@ describe("actions lesson", ()=>{
     
     it("select option", () => {
         cy.visit("http://127.0.0.1:5500/cypress/e2e/html-files/actionsLesson.html")
-        cy.get("#country").select("Jordan")
-        cy.get("#country").select("egypt_country")
+        cy.get("#country").select("Jordan") // select by text
+        cy.get("#country").select("egypt_country") // select by value
+        cy.get("#country").select("0") //select by index
     })
 })
